@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form >
+<label for="name">Name</label>
+    <input type="text" name="name">
+    <button onclick="sub()">Submit</button>
+</form>
+
+<script>
+function sub(){
+
+
+let name_value=document.getElementsByTagName("input")[0].value;
+
+if(Boolean(name_value.trim())){
+    alert("congrates form submitted")
+}
+else{
+    alert("please fill all the fields")
+}
+
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

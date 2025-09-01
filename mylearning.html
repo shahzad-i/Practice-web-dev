@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=bgbgvgvvgvgvggvgvvvgvgvgvggggvv bbbbbbbbnbbnbnnp0-,\ initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My learning</h1>
+    <h2>Number conversion</h2>
+    <!-- convert number into decimal -->
+    <p>convert number into decimal</p>
+        <input type="number" placeholder="Enter number" id="numToDecimal">
+        <button onclick="toDecimal()">Change</button>
+    <p>Result: <span id="decimalResult"></span> </p>
+    <!-- Convert decimal to integer -->
+    <p>Convert decimal to integer</p>
+        <input type="number" name="number" id="decimalToInteger" placeholder="Enter decimal">
+        <button onclick="toInteger()">Change</button>
+    <p>Result: <span id="intRsult"></span> </p>
+    <!-- Convert number to string -->
+    <p> Convert number to string</p>
+        <input type="number" name="number" id="numberToString" placeholder="Enter number">
+        <button onclick="to_String()">Change</button>
+    <p>Result: <span id="stringResult"></span> </p>
+
+
+    <h2>Simple Calculator</h2>
+        <input type="text" class="first">
+        <input type="text" class="second"><br><br>
+    <button onclick="calculation('add')">Add</button>
+    <button onclick="calculation('sub')">Subtract</button>
+    <button onclick="calculation('mul')">Multiply</button>
+    <button onclick="calculation('div')">Divide</button>
+    <p>Result: <span class="cal"> </span></p>
+    <script>
+        // convert number into decimal
+    function toDecimal(){
+        let num =   
+        document.getElementById("numToDecimal").value;
+        let result= Number(num).toFixed(2);
+        document.getElementById("decimalResult").innerText=result;
+    }
+        //  Convert decimal to integer
+    function toInteger(){
+        let num=
+        document.getElementById("decimalToInteger").value;
+        let result=parseInt(num);
+        document.getElementById("intRsult").innerText=result;
+    }
+        //   Convert number to string
+     function to_String(){
+        let num=
+        document.getElementById("numberToString").value;
+        let result=num;
+console.log(Number(result).toString()==="333")
+        document.getElementById("stringResult").innerText=Number(result).toString();
+     }
+function calculation(text){
+let operand1=document.getElementsByClassName("first")[0].value;
+let operand2=document.getElementsByClassName("second")[0].value;
+let result;
+
+switch (text) {
+case 'add':
+        result=Number(operand1)+Number(operand2);
+        break;
+case 'sub':
+         result=Number(operand1)-Number(operand2);  
+        break;
+case 'mul':
+         result=Number(operand1)*Number(operand2);  
+        break;
+case 'div':
+         result=Number(operand1)/Number(operand2);  
+        break; 
+    default:
+        document.getElementsByClassName("first")[0].value='';
+        document.getElementsByClassName("second")[0].value='';
+        result="none"
+        break;
+}
+
+document.getElementsByClassName('cal')[0].innerText=result
+}
+function mul(){}
+function div(){}
+
+    </script>
+
+</body>
+</html>

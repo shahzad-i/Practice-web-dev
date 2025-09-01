@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Guss the Number Game</h1> 
+   <input type="number" >
+   <button onclick="sub()">Check</button>
+   <p></p>
+   <script>
+  const randomNumber =Math.floor(Math.random() * 100 + 1);
+ 
+  function checkNO(num){
+if (num == randomNumber){
+     return "“You guessed it!”";
+}
+else if(num > randomNumber){
+    return"You guess it“Too high!”"
+}
+ else{
+      return "You guess “Too low!”";
+}
+ }
+
+function sub(){
+    let val=document.getElementsByTagName("input")[0].value;
+    let temp=checkNO(Number(val));
+     document.querySelector("p").innerText=`${temp}guess number`;
+     document.getElementsByTagName("input")[0].value="";
+   
+}
+
+
+   </script>
+</body>
+</html>

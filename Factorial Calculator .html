@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Factorial Calculator</h1>  
+   <input type="number" >
+   <button onclick="sub()">check</button>
+   <p></p>
+<script>
+        console.log(`Step: result × ${i} = ${result}`);
+function checkNO(number){
+  if (number===0){
+    console.log("0!=1");
+  }
+   else {
+    for (let i=number; i >= 1; i--)
+     if (i===1) {
+            continue;  
+  }
+   }
+       if (result===0) {
+         console.log(`${number}! = ${result}`);
+       }
+ }
+function sub(){
+  let inp=document.getElementsByTagName('input')[0].value;
+let number=parseInt(prompt("Enter a number:"));
+  let result=Math.pow(Number(inp), number);
+   document.querySelector("p").innerText=`${inp} ${number} = ${result}`;
+  document.getElementsByTagName("input")[0].value=" "
+}
+
+</script>
+</body>
+</html>
